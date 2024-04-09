@@ -1,8 +1,9 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
     "sap/ui/model/json/JSONModel",
-    "sap/ui/model/resource/ResourceModel"
-], function(UIComponent,JSONModel,ResourceModel) {
+    "sap/ui/model/resource/ResourceModel",
+    "./controller/HelloDialogue"
+], function(UIComponent,JSONModel,ResourceModel,HelloDialogue) {
     'use strict';
     return UIComponent.extend("sap.ui.demo.walkthrough.Component",{
         metadata: {
@@ -21,6 +22,19 @@ sap.ui.define([
             var oModel = new JSONModel(oData);
             this.setModel(oModel);
 
+            // * Call the dialogue and add an exit event handler.
+
+            this._helloDialogue = new HelloDialogue(this.getRootControl());
+        },
+
+        exit: function(){
+            this._helloDialogue.destroy();
+            delete this._helloDialogue;
+        },
+
+        openHelloDialogue : function(){
+            this._helloDialogue.open();
         }
+        
     }) //* Extend the component file
 });

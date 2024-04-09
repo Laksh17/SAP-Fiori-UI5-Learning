@@ -1,8 +1,8 @@
 {
     "_version": "1.1.0",
-
+	
 	"start_url": "<startUrl>",
-
+	
     "sap.app": {
         "_version": "1.1.0",
         "id": "sap.ui.demo.walkthrough",
@@ -12,7 +12,7 @@
             "version": "1.0.0"
         },
         "title": "{{appTitle}}",
-        "description":"{{appDescription}}",
+        "description": "{{appDescription}}",
         "tags": {
             "keywords": [
                 "{{<keyword1>}}", "{{<keyword2>}}"
@@ -44,8 +44,7 @@
         },
         "supportedThemes": [
             "sap_hcb",
-            "sap_bluecrystal",
-            "sap_fiori_3_dark"
+            "sap_bluecrystal"
         ]
     },
     "sap.ui5": {
@@ -67,6 +66,7 @@
             "libs": {
                 "sap.m": {}
             }
+            
         },
         "models": {
             "i18n": {
@@ -95,10 +95,10 @@
         },
         "handleValidation": false,
         "config": {
-
+          
         },
         "routing": {
-
+          
         },
         "extends": {
             "component" : "<extendedComponentId>",
